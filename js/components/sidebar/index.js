@@ -47,12 +47,52 @@ class SideBar extends Component {
           />
         </Image>
         <List>
-          <ListItem button iconLeft onPress={() => this.navigateTo('anatomy')} >
+          <ListItem button iconLeft onPress={() => this.navigateTo('criarMensagem')} >
             <View style={styles.listItemContainer}>
               <View style={[styles.iconContainer, { backgroundColor: '#0209D8', paddingLeft: 14 }]}>
                 <Icon name="ios-phone-portrait-outline" style={styles.sidebarIcon} />
               </View>
-              <Text style={styles.text}>Anatomy</Text>
+              <Text style={styles.text}>Criar Mensagem</Text>
+            </View>
+          </ListItem>
+          <ListItem button iconLeft onPress={() => this.navigateTo('detalhesMensagem')} >
+            <View style={styles.listItemContainer}>
+              <View style={[styles.iconContainer, { backgroundColor: '#0209D8', paddingLeft: 14 }]}>
+                <Icon name="ios-phone-portrait-outline" style={styles.sidebarIcon} />
+              </View>
+              <Text style={styles.text}>Detalhes Mensagem</Text>
+            </View>
+          </ListItem>
+          <ListItem button iconLeft onPress={() => this.navigateTo('login')} >
+            <View style={styles.listItemContainer}>
+              <View style={[styles.iconContainer, { backgroundColor: '#0209D8', paddingLeft: 14 }]}>
+                <Icon name="ios-phone-portrait-outline" style={styles.sidebarIcon} />
+              </View>
+              <Text style={styles.text}>Login</Text>
+            </View>
+          </ListItem>
+          <ListItem button iconLeft onPress={() => this.navigateTo('mensagensProximas')} >
+            <View style={styles.listItemContainer}>
+              <View style={[styles.iconContainer, { backgroundColor: '#0209D8', paddingLeft: 14 }]}>
+                <Icon name="ios-phone-portrait-outline" style={styles.sidebarIcon} />
+              </View>
+              <Text style={styles.text}>Mensagens Proximas</Text>
+            </View>
+          </ListItem>
+          <ListItem button iconLeft onPress={() => this.navigateTo('minhasMensagens')} >
+            <View style={styles.listItemContainer}>
+              <View style={[styles.iconContainer, { backgroundColor: '#0209D8', paddingLeft: 14 }]}>
+                <Icon name="ios-phone-portrait-outline" style={styles.sidebarIcon} />
+              </View>
+              <Text style={styles.text}>Minhas Mensagens</Text>
+            </View>
+          </ListItem>
+          <ListItem button iconLeft onPress={() => this.navigateTo('principal')} >
+            <View style={styles.listItemContainer}>
+              <View style={[styles.iconContainer, { backgroundColor: '#0209D8', paddingLeft: 14 }]}>
+                <Icon name="ios-phone-portrait-outline" style={styles.sidebarIcon} />
+              </View>
+              <Text style={styles.text}>Principal</Text>
             </View>
           </ListItem>
           <ListItem button iconLeft onPress={() => this.navigateTo('badge')}>

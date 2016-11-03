@@ -8,7 +8,6 @@ import { closeDrawer } from './actions/drawer';
 import { popRoute } from './actions/route';
 
 import Home from './components/home/';
-import Anatomy from './components/anatomy/';
 import NHBadge from './components/badge/';
 import NHButton from './components/button/';
 import NHCard from './components/card/';
@@ -33,6 +32,13 @@ import NHThumbnail from './components/thumbnail/';
 import SplashPage from './components/splashscreen/';
 import SideBar from './components/sidebar';
 import statusBarColor from './themes/base-theme';
+
+import CriarMensagem from './pages/criarMensagem/';
+import DetalhesMensagem from './pages/detalhesMensagem/';
+import Login from './pages/login/';
+import MensagensProximas from './pages/mensagensProximas/';
+import MinhasMensagens from './pages/minhasMensagens/';
+import Principal from './pages/principal/';
 
 Navigator.prototype.replaceWithAnimation = function replaceWithAnimation(route) {
   const activeLength = this.state.presentedIndex + 1;
@@ -108,12 +114,22 @@ class AppNavigator extends Component {
 
   renderScene(route, navigator) { // eslint-disable-line class-methods-use-this
     switch (route.id) {
+      case 'criarMensagem':
+        return <CriarMensagem navigator={navigator} />;
+      case 'detalhesMensagem':
+        return <DetalhesMensagem navigator={navigator} />;
+      case 'login':
+        return <Login navigator={navigator} />;
+      case 'mensagensProximas':
+        return <MensagensProximas navigator={navigator} />;
+      case 'minhasMensagens':
+        return <MinhasMensagens navigator={navigator} />;
+      case 'principal':
+        return <Principal navigator={navigator} />;
       case 'splashscreen':
         return <SplashPage navigator={navigator} />;
       case 'home':
         return <Home navigator={navigator} />;
-      case 'anatomy':
-        return <Anatomy navigator={navigator} />;
       case 'badge':
         return <NHBadge navigator={navigator} />;
       case 'button':
